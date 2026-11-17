@@ -1,0 +1,174 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "fleet-view",
+    "version": "0.1.0",
+    "description": "The routes fleet-view serves. Every path is relative to the mount the host assigns, and the host serves this document rebased under it at <mount>/openapi.json."
+  },
+  "paths": {
+    "/layout": {
+      "get": {
+        "operationId": "read-layout",
+        "summary": "The shared floor plan",
+        "description": "The floor plan everyone on this server sees, and its version. The host takes view_resource on the module's instance before this is called.",
+        "responses": {
+          "200": {
+            "description": "The layout and its version.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "integer",
+                      "description": "How many times the layout has been saved; 0 when it never has."
+                    },
+                    "layout": {
+                      "description": "The floor plan: an object with a units list, or null when nothing has been saved."
+                    },
+                    "saved_by": {
+                      "type": "string",
+                      "description": "Who the host said saved it last."
+                    },
+                    "saved_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "When it was saved last."
+                    }
+                  },
+                  "required": [
+                    "version",
+                    "layout"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The layout file could not be read or written; LAYOUT_UNREADABLE.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "A refusal with this module's code.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "operationId": "save-layout",
+        "summary": "Save the shared floor plan",
+        "description": "Saves the floor plan over the version the caller read. A save naming an older version is refused with LAYOUT_CHANGED, so a change nobody has seen is never overwritten. The host takes operate_resource on the module's instance before this is called.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "version": {
+                    "type": "integer",
+                    "description": "The version the caller read."
+                  },
+                  "layout": {
+                    "type": "object",
+                    "description": "The floor plan, an object with a units list."
+                  }
+                },
+                "required": [
+                  "version",
+                  "layout"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The layout as saved, with its new version.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "integer",
+                      "description": "How many times the layout has been saved; 0 when it never has."
+                    },
+                    "layout": {
+                      "description": "The floor plan: an object with a units list, or null when nothing has been saved."
+                    },
+                    "saved_by": {
+                      "type": "string",
+                      "description": "Who the host said saved it last."
+                    },
+                    "saved_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "When it was saved last."
+                    }
+                  },
+                  "required": [
+                    "version",
+                    "layout"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A refusal with this module's code.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "A refusal with this module's code.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The layout file could not be read or written; LAYOUT_UNREADABLE.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "A refusal with this module's code.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

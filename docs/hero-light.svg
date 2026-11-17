@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="t d">
+<title id="t">Fleet View</title>
+<desc id="d">A print farm floor plan seen from above; one rack pulled out into its front view with shelf 2 selected and a selection pill offering Pause and Preheat for its four printers.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ececee"/><stop offset="1" stop-color="#f6f6f7"/></linearGradient>
+<radialGradient id="glow" cx="0.72" cy="0.62" r="0.55"><stop offset="0" stop-color="#FA6831" stop-opacity="0.10"/><stop offset="1" stop-color="#FA6831" stop-opacity="0"/></radialGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FA6831" stop-opacity="0.22"/><stop offset="1" stop-color="#FA6831" stop-opacity="0"/></linearGradient>
+<pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#d9dadd"/></pattern>
+<filter id="lift" x="-20%" y="-60%" width="140%" height="240%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.16"/></filter>
+</defs>
+<style>
+text{font-family:'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif}
+.b{font-weight:600}.bb{font-weight:700}.num{font-variant-numeric:tabular-nums}
+.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}
+.txt{fill:#18181b}.muted{fill:#5d5f66}.faint{fill:#a3a5ab}
+.panel{fill:#ffffff;stroke:#dfe0e3}
+.tile{fill:#f6f6f7;stroke:#e2e3e6}.tile.sel{stroke:#FA6831;stroke-width:1.5}
+.ph{fill:none;stroke:#e2e3e6;stroke-width:1.5;stroke-dasharray:4 4}
+.glyph{fill:none;stroke:#a3a5ab;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.track{fill:#e2e3e6}.board{fill:#cfd0d4}
+.f-orange{fill:#FA6831}.f-green{fill:#2E9E4F}.f-amber{fill:#D9940F}.f-red{fill:#D93A3A}.f-faint{fill:#a3a5ab}
+.txt-green{fill:#2E9E4F}.txt-amber{fill:#D9940F}.txt-red{fill:#D93A3A}.otext{fill:#D9531E}
+.rack{fill:#f6f6f7;stroke:#e2e3e6}.rack.sel{stroke:#FA6831;stroke-width:2}
+.btn{fill:#f1f1f3}.ico{fill:none;stroke:#18181b;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+</style>
+<rect width="1280" height="640" fill="url(#bg)"/>
+<rect width="1280" height="640" fill="url(#glow)"/>
+
+<g>
+<text x="72" y="206" class="t13 bb otext" letter-spacing="2.4">PRUSA CONNECT EXTENSION</text>
+<text x="68" y="292" font-size="84" class="bb txt" letter-spacing="-2.5">Fleet View</text>
+<text class="muted" font-size="23"><tspan x="72" y="346">Your print farm as racks, shelves</tspan><tspan x="72" y="378">and slots. Select any of them and</tspan><tspan x="72" y="410">command them at once.</tspan></text>
+
+<text x="72" y="466" class="t13"><tspan dx="0" font-size="17" class="f-orange">●</tspan><tspan dx="6" class="muted">Printing</tspan><tspan dx="20" font-size="17" class="f-faint">●</tspan><tspan dx="6" class="muted">Idle</tspan><tspan dx="20" font-size="17" class="f-green">●</tspan><tspan dx="6" class="muted">Finished</tspan><tspan dx="20" font-size="17" class="f-amber">●</tspan><tspan dx="6" class="muted">Paused</tspan><tspan dx="20" font-size="17" class="f-red">●</tspan><tspan dx="6" class="muted">Error</tspan></text>
+<text x="72" y="504" class="t13 muted">Pause · Resume · Stop · Preheat · Cool down · Home · Set ready</text>
+</g>
+<rect x="640" y="30" width="576" height="182" rx="14" class="panel"/>
+<text x="658" y="55" class="t12"><tspan class="b txt">Floor</tspan><tspan dx="8" class="faint">Hall 1 · 6 racks · 72 slots</tspan></text>
+<text x="1198" y="55" text-anchor="end" class="t12 faint">top view</text>
+<rect x="656" y="70" width="544" height="130" rx="6" fill="#fafafb"/><rect x="656" y="70" width="544" height="130" rx="6" fill="url(#dots)"/>
+<path d="M1200 110V76a6 6 0 0 0-6-6H662a6 6 0 0 0-6 6v118a6 6 0 0 0 6 6H1194a6 6 0 0 0 6-6V150" fill="none" stroke="#cfd0d4" stroke-width="2"/>
+<path d="M1200 110a40 40 0 0 1-40 40" fill="none" stroke="#cfd0d4" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="680" y="143" class="t11 faint" letter-spacing="1.5">AISLE</text>
+<rect x="680" y="88" width="140" height="34" rx="6" class="rack"/>
+<text x="690" y="109" class="t12 bb muted">A1</text>
+<rect x="726" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="735" cy="105" r="3.5" class="f-orange"/>
+<rect x="748" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="757" cy="105" r="3.5" class="f-orange"/>
+<rect x="770" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="779" cy="105" r="3.5" class="f-orange"/>
+<rect x="792" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="801" cy="105" r="3.5" class="f-faint"/>
+<rect x="858" y="88" width="140" height="34" rx="6" class="rack"/>
+<text x="868" y="109" class="t12 bb muted">A2</text>
+<rect x="904" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="913" cy="105" r="3.5" class="f-orange"/>
+<rect x="926" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="935" cy="105" r="3.5" class="f-faint"/>
+<rect x="948" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="957" cy="105" r="3.5" class="f-green"/>
+<rect x="970" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="979" cy="105" r="3.5" class="f-orange"/>
+<rect x="1036" y="88" width="140" height="34" rx="6" class="rack"/>
+<text x="1046" y="109" class="t12 bb muted">A3</text>
+<rect x="1082" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="1091" cy="105" r="3.5" class="f-faint"/>
+<rect x="1104" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="1113" cy="105" r="3.5" class="f-orange"/>
+<rect x="1126" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="1135" cy="105" r="3.5" class="f-orange"/>
+<rect x="1148" y="96" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="1157" cy="105" r="3.5" class="f-red"/>
+<rect x="680" y="152" width="140" height="34" rx="6" class="rack"/>
+<text x="690" y="173" class="t12 bb muted">B1</text>
+<rect x="726" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="735" cy="169" r="3.5" class="f-green"/>
+<rect x="748" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="757" cy="169" r="3.5" class="f-orange"/>
+<rect x="770" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="779" cy="169" r="3.5" class="f-orange"/>
+<rect x="792" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="801" cy="169" r="3.5" class="f-faint"/>
+<rect x="853" y="147" width="150" height="44" rx="9" fill="#FA6831" fill-opacity="0.12"/>
+<rect x="858" y="152" width="140" height="34" rx="6" class="rack sel"/>
+<text x="868" y="173" class="t12 bb otext">B2</text>
+<rect x="904" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="913" cy="169" r="3.5" class="f-orange"/>
+<rect x="926" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="935" cy="169" r="3.5" class="f-orange"/>
+<rect x="948" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="957" cy="169" r="3.5" class="f-amber"/>
+<rect x="970" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="979" cy="169" r="3.5" class="f-green"/>
+<rect x="1036" y="152" width="140" height="34" rx="6" class="rack"/>
+<text x="1046" y="173" class="t12 bb muted">B3</text>
+<rect x="1082" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="1091" cy="169" r="3.5" class="f-orange"/>
+<rect x="1104" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="1113" cy="169" r="3.5" class="f-faint"/>
+<rect x="1126" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="1135" cy="169" r="3.5" class="f-orange"/>
+<rect x="1148" y="160" width="18" height="18" rx="4" fill="#ffffff" stroke="#e2e3e6"/><circle cx="1157" cy="169" r="3.5" class="f-faint"/>
+<path d="M858 186L654 236H1202L998 186Z" fill="url(#beam)"/>
+<path d="M858 186L654 236M998 186L1202 236" stroke="#FA6831" stroke-opacity="0.5" stroke-dasharray="3 4"/>
+<rect x="640" y="236" width="576" height="332" rx="14" class="panel"/>
+<text x="658" y="263"><tspan class="t14 bb txt">Rack B2</tspan><tspan dx="8" class="t12 faint">12 slots · 10 printers</tspan></text>
+<text x="1198" y="263" text-anchor="end" class="t12 faint">front view</text>
+<rect x="660" y="304.0" width="24" height="24" rx="7" fill="#f6f6f7" stroke="#e2e3e6"/>
+<text x="672" y="320.5" text-anchor="middle" class="t12 bb muted" >1</text>
+<rect x="696" y="284" width="116" height="64" rx="8" class="tile"/><text x="708" y="306" class="t13 b txt">MK4S-01</text><circle cx="798" cy="301" r="4" class="f-orange"/><text x="708" y="324" class="t11 muted">Printing</text><text x="800" y="324" text-anchor="end" class="t11 muted num">62%</text><rect x="708" y="334" width="92" height="4" rx="2" class="track"/><rect x="708" y="334" width="57.0" height="4" rx="2" class="f-orange"/>
+<rect x="822" y="284" width="116" height="64" rx="8" class="tile"/><text x="834" y="306" class="t13 b txt">MK4S-02</text><circle cx="924" cy="301" r="4" class="f-orange"/><text x="834" y="324" class="t11 muted">Printing</text><text x="926" y="324" text-anchor="end" class="t11 muted num">18%</text><rect x="834" y="334" width="92" height="4" rx="2" class="track"/><rect x="834" y="334" width="16.6" height="4" rx="2" class="f-orange"/>
+<rect x="948" y="284" width="116" height="64" rx="8" class="tile"/><text x="960" y="306" class="t13 b txt">MK4S-03</text><circle cx="1050" cy="301" r="4" class="f-faint"/><text x="960" y="324" class="t11 muted">Idle</text>
+<rect x="1074" y="284" width="116" height="64" rx="8" class="ph"/><rect x="1121.0" y="301" width="22" height="15" rx="2" class="glyph"/><path d="M1126.0 321h12M1132.0 316v5" class="glyph"/><text x="1132.0" y="336" text-anchor="middle" class="t11 faint">Computer</text>
+<rect x="692" y="352" width="502" height="3" rx="1.5" class="board"/>
+<rect x="650" y="362" width="556" height="86" rx="12" fill="#FA6831" fill-opacity="0.09" stroke="#FA6831" stroke-width="1.5"/>
+<rect x="660" y="390.0" width="24" height="24" rx="7" class="f-orange"/>
+<text x="672" y="406.5" text-anchor="middle" class="t12 bb " fill="#fff">2</text>
+<rect x="696" y="370" width="116" height="64" rx="8" class="tile sel"/><text x="708" y="392" class="t13 b txt">CORE-04</text><circle cx="798" cy="387" r="4" class="f-orange"/><text x="708" y="410" class="t11 muted">Printing</text><text x="800" y="410" text-anchor="end" class="t11 muted num">74%</text><rect x="708" y="420" width="92" height="4" rx="2" class="track"/><rect x="708" y="420" width="68.1" height="4" rx="2" class="f-orange"/>
+<rect x="822" y="370" width="116" height="64" rx="8" class="tile sel"/><text x="834" y="392" class="t13 b txt">CORE-05</text><circle cx="924" cy="387" r="4" class="f-orange"/><text x="834" y="410" class="t11 muted">Printing</text><text x="926" y="410" text-anchor="end" class="t11 muted num">41%</text><rect x="834" y="420" width="92" height="4" rx="2" class="track"/><rect x="834" y="420" width="37.7" height="4" rx="2" class="f-orange"/>
+<rect x="948" y="370" width="116" height="64" rx="8" class="tile sel"/><text x="960" y="392" class="t13 b txt">CORE-06</text><circle cx="1050" cy="387" r="4" class="f-amber"/><text x="960" y="410" class="t11 txt-amber">Paused</text><text x="1052" y="410" text-anchor="end" class="t11 muted num">55%</text><rect x="960" y="420" width="92" height="4" rx="2" class="track"/><rect x="960" y="420" width="50.6" height="4" rx="2" class="f-amber"/>
+<rect x="1074" y="370" width="116" height="64" rx="8" class="tile sel"/><text x="1086" y="392" class="t13 b txt">CORE-07</text><circle cx="1176" cy="387" r="4" class="f-green"/><text x="1086" y="410" class="t11 txt-green">Finished</text><rect x="1086" y="420" width="92" height="4" rx="2" class="track"/><rect x="1086" y="420" width="92.0" height="4" rx="2" class="f-green"/>
+<rect x="692" y="438" width="502" height="3" rx="1.5" class="board"/>
+<rect x="660" y="476.0" width="24" height="24" rx="7" fill="#f6f6f7" stroke="#e2e3e6"/>
+<text x="672" y="492.5" text-anchor="middle" class="t12 bb muted" >3</text>
+<rect x="696" y="456" width="116" height="64" rx="8" class="tile"/><rect x="697" y="466" width="3" height="44" rx="1.5" class="f-red"/><text x="708" y="478" class="t13 b txt">XL-08</text><circle cx="798" cy="473" r="4" class="f-red"/><text x="708" y="496" class="t11 txt-red">Error</text><text x="800" y="496" text-anchor="end" class="t11 muted num">33%</text><rect x="708" y="506" width="92" height="4" rx="2" class="track"/><rect x="708" y="506" width="30.4" height="4" rx="2" class="f-red"/>
+<rect x="822" y="456" width="116" height="64" rx="8" class="tile"/><text x="834" y="478" class="t13 b txt">XL-09</text><circle cx="924" cy="473" r="4" class="f-faint"/><text x="834" y="496" class="t11 muted">Idle</text>
+<rect x="948" y="456" width="116" height="64" rx="8" class="ph"/><path d="M1013.0 473a6 6 0 0 0-7.5 7.5l-8 8 2.8 2.8 8-8a6 6 0 0 0 7.5-7.5l-3.6 3.6-2.6-.6-.6-2.6z" class="glyph"/><text x="1006.0" y="508" text-anchor="middle" class="t11 faint">Service</text>
+<rect x="1074" y="456" width="116" height="64" rx="8" class="tile"/><text x="1086" y="478" class="t13 b txt">XL-10</text><circle cx="1176" cy="473" r="4" class="f-orange"/><text x="1086" y="496" class="t11 muted">Printing</text><text x="1178" y="496" text-anchor="end" class="t11 muted num">90%</text><rect x="1086" y="506" width="92" height="4" rx="2" class="track"/><rect x="1086" y="506" width="82.8" height="4" rx="2" class="f-orange"/>
+<rect x="692" y="524" width="502" height="3" rx="1.5" class="board"/>
+<g filter="url(#lift)"><rect x="702.0" y="543.0" width="452" height="50" rx="25" fill="#ffffff" stroke="#dcdde0"/></g>
+<rect x="710.0" y="551.0" width="34" height="34" rx="17" class="f-orange"/><path d="M719.5 568.5l5 5 9.5-10" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="756.0" y="573.0" class="t14"><tspan class="bb txt">Shelf 2</tspan><tspan dx="5" class="muted">· 4 printers</tspan></text>
+<rect x="904.0" y="557.0" width="1" height="22" fill="#dcdde0"/>
+<rect x="916.0" y="551.0" width="88" height="34" rx="17" class="btn"/><path d="M934.0 562.0v12M940.0 562.0v12" class="ico"/><text x="950.0" y="573.0" class="t13 b txt">Pause</text>
+<rect x="1012.0" y="551.0" width="100" height="34" rx="17" class="btn"/><path d="M1033.0 576.0c-4.5 0-6.5-3-6.5-6 0-3.5 3-5 3.5-9 2 1.5 3 3 3 5 1-1 1.5-2 1.5-3 2.5 2 4.5 4.5 4.5 7 0 3.5-2.5 6-6 6z" class="ico"/><text x="1046.0" y="573.0" class="t13 b txt">Preheat</text>
+<circle cx="1137.0" cy="568.0" r="17" class="btn"/><circle cx="1131.0" cy="568.0" r="1.6" fill="#18181b"/><circle cx="1137.0" cy="568.0" r="1.6" fill="#18181b"/><circle cx="1143.0" cy="568.0" r="1.6" fill="#18181b"/>
+</svg>
