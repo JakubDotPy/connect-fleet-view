@@ -4,6 +4,7 @@ import {
   PRINTER_STATE_SEVERITY_TIER,
   PRINTER_STATE_TONE,
   type PrinterState,
+  type PrinterStateTone,
   printerStateOf,
   STATE_PATH,
   textAt,
@@ -74,14 +75,20 @@ export const GROUPS: readonly Group[] = [
 
 // The Overview's summary counts by these, and so does this page, so one
 // printer reads the same on both.
-const GROUP_OF_TONE = {
+const GROUP_OF_TONE: Readonly<Record<PrinterStateTone, Group>> = {
   active: 'printing',
+  busy: 'printing',
+  moving: 'printing',
   fault: 'attention',
   attention: 'attention',
-  done: 'done',
+  paused: 'attention',
+  ready: 'done',
+  finished: 'done',
+  stopped: 'done',
   idle: 'idle',
   quiet: 'silent',
-} as const satisfies Record<string, Group>;
+  offline: 'silent',
+};
 
 /** A disconnected machine reads OFFLINE, not the last thing it said. */
 export const stateOf = (device: Device): PrinterState =>

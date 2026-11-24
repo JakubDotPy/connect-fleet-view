@@ -7,6 +7,12 @@ Write the entry in the same change as the code. One bullet per behaviour a
 person outside this repository can observe: a route, a setting, a screen, a
 refusal. Name the route and the setting key, never a function or a file.
 
+## Unreleased
+
+### Changed
+
+- A printer's tile edge and state badge take the Ember state colour of its exact state, as on the Printers page.
+
 ## 0.1.0 - 2026-11-17
 
 ### Added
