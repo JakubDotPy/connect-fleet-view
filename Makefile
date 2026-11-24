@@ -2,7 +2,8 @@
 # neither the Go SDK nor the @prusa packages are published yet.
 
 CORE_REPO ?= https://github.com/prusa3d/prusa-connect.git
-CORE_REF ?= v0.1.0-beta.1
+# A tag or a commit; .core/ is cloned once, so delete it after changing this.
+CORE_REF ?= v0.1.0-beta.2
 CORE := .core
 
 NAME := $(shell sed -n 's/^name:[[:space:]]*//p' module.yaml | head -1)
@@ -16,7 +17,9 @@ export CI ?= true
 .PHONY: core check go-check ui-check ui-build release install clean
 
 $(CORE)/.git:
-	git -c advice.detachedHead=false clone --quiet --depth 1 --branch $(CORE_REF) $(CORE_REPO) $(CORE)
+	git init --quiet $(CORE)
+	git -C $(CORE) fetch --quiet --depth 1 $(CORE_REPO) $(CORE_REF)
+	git -C $(CORE) -c advice.detachedHead=false checkout --quiet FETCH_HEAD
 
 $(CORE)/packages/svelte/dist/build/module.js: | $(CORE)/.git
 	cd $(CORE)/packages/svelte && pnpm install --frozen-lockfile
