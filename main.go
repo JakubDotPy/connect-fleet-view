@@ -46,7 +46,7 @@ import (
 // manifest's, and the host holds the two to each other.
 const (
 	name    = "fleet-view"
-	release = extension.Version("0.1.0")
+	release = extension.Version("0.2.0")
 )
 
 // layouts is where the floor plan is kept, set once the host sends the data
