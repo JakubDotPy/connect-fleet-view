@@ -31,7 +31,7 @@ rack, one shelf or one printer and send them a command at once.
 
 ## Requirements
 
-- Prusa Connect `0.1.0-beta.1` or newer.
+- Prusa Connect `0.1.0-beta.2` or newer.
 - A data directory for the module. It asks for one in `module.yaml` (`needs: data: true`) and keeps the layout in it
   as `layout.json`.
 

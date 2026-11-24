@@ -12,6 +12,7 @@ refusal. Name the route and the setting key, never a function or a file.
 ### Changed
 
 - A printer's tile edge and state badge take the Ember state colour of its exact state, as on the Printers page.
+- The module requires Prusa Connect `0.1.0-beta.2` or newer.
 
 ## 0.1.0 - 2026-11-17
 

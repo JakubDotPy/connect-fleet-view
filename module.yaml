@@ -26,7 +26,7 @@ platforms:
   - windows_amd64
 
 require:
-  core: ">=0.1.0-beta.1"
+  core: ">=0.1.0-beta.2"
 
 # A directory of its own, where the shared floor plan is kept as layout.json.
 needs:
