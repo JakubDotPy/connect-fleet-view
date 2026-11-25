@@ -12,7 +12,7 @@ kind: sink
 version: 0.3.0
 license: MIT
 title: Fleet View
-summary: The farm as a floor plan of racks, each printer in its slot, with batch control.
+summary: See your print farm as it stands in the room, every printer live in its rack and shelf, and pause, preheat or home a whole shelf in one click.
 codeowner: jakubdotpy
 # The module wire major the process half speaks.
 contract_major: 1
@@ -56,7 +56,7 @@ ui:
     cards:
       - id: rack
         title: Rack
-        description: One rack from the front, each printer in its slot, with batch control.
+        description: One rack from the front, every printer's state and progress live, with batch control for a shelf or the whole rack.
         icon: layers
         size: {w: 6, h: 5}
         least: {w: 3, h: 3}
