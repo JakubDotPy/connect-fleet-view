@@ -7,6 +7,14 @@ Write the entry in the same change as the code. One bullet per behaviour a
 person outside this repository can observe: a route, a setting, a screen, a
 refusal. Name the route and the setting key, never a function or a file.
 
+## 0.3.0 - 2026-11-25
+
+### Changed
+
+- Printer tiles show the print's picture, a state chip and an attention outline.
+- The rack front view and the rack card draw a rack as an outlined cabinet, with a name rail beside each shelf and
+  labelled slots on a ruler.
+
 ## 0.2.0 - 2026-11-24
 
 ### Changed

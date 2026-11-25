@@ -90,9 +90,9 @@
   const slot = $derived(Math.floor(cell - SLOT_GAP));
   const pictured = $derived(slot >= 32);
 
-  // A card's header, its padding, the space under the header and the feet.
+  // A card's header, its padding and the space under the header.
   const CARD_CHROME = 60;
-  // Above each shelf's slots and the board under them.
+  // Above each shelf's slots and the rule under them.
   const SHELF_CHROME = 8;
 
   /** How tall a unit's slots can be and still keep the card inside its footprint. */

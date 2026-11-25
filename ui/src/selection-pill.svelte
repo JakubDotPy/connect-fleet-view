@@ -67,7 +67,7 @@
   <div
     bind:this={pill}
     class={[
-      'absolute z-10 flex items-center gap-1 rounded-full border border-border bg-popover py-1 ps-3 pe-1 text-xs shadow-lg',
+      'absolute z-10 flex items-center gap-1 rounded-full border border-border bg-popover py-1 ps-3 pe-1 text-xs whitespace-nowrap shadow-lg',
       !place && 'invisible',
     ]}
     style:top="{place?.top ?? 0}px"
