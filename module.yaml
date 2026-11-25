@@ -9,7 +9,7 @@ name: fleet-view
 # which is what a module with a process needs. The browser half is declared
 # beside it, as `service.assets`.
 kind: sink
-version: 0.2.0
+version: 0.3.0
 license: MIT
 title: Fleet View
 summary: The farm as a floor plan of racks, each printer in its slot, with batch control.

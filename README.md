@@ -44,7 +44,7 @@ its own and does no background work.
 From a release directory:
 
 ```bash
-prusa-connect module add github.com/jakubdotpy/connect-fleet-view@0.2.0 -from <release directory> -approve
+prusa-connect module add github.com/jakubdotpy/connect-fleet-view@0.3.0 -from <release directory> -approve
 ```
 
 Then open **Fleet View** in the sidebar. To put a rack on a dashboard, edit the dashboard, choose **Add a card**, pick
