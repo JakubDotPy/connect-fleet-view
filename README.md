@@ -18,8 +18,9 @@ rack, one shelf or one printer and send them a command at once.
 
 - **Floor plan.** Every rack on a grid, with a dot per slot coloured by the printer's state. Double-click a rack to
   open it.
-- **Rack front view.** Shelves top to bottom, each slot a tile with the printer's name, state and print progress.
-  Computer and service placeholders keep a slot free of printers.
+- **Rack front view.** Shelves top to bottom, each slot a tile with the printer's name, the picture of the print while
+  it prints (the printer's picture otherwise), its state and print progress, and a mark on a printer that needs
+  attention. Computer and service placeholders keep a slot free of printers.
 - **Batch commands.** Select a rack, a shelf or a printer and pause, resume, stop, set ready, preheat, cool down or
   home all of them.
 - **Edit mode.** Add and name racks and shelves, then drag printers or placeholders onto slots, on the floor or in a

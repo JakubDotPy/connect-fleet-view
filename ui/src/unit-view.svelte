@@ -1,6 +1,6 @@
 <!--
   One rack from the front: its shelves top to bottom, a tile per
-  slot, each shelf's name on its board. A press on a printer takes its shelf
+  slot, each shelf's name beside it. A press on a printer takes its shelf
   first and the printer second. While editing, printers are dragged between
   slots and from the unplaced list, and every slot's name can be changed.
 -->
@@ -76,7 +76,7 @@
     return '[data-frame]';
   });
 
-  // The shelf whose name is being typed, on the rack's upright.
+  // The shelf whose name is being typed, beside the shelf.
   let renaming = $state<number>();
   $effect(() => {
     if (renaming === undefined || !box) return;
@@ -179,7 +179,7 @@
         <div
           data-shelf={index}
           class={[
-            'grid gap-2 rounded-md pb-2',
+            'grid gap-2 rounded-md',
             shelfSelected &&
               'ring-2 ring-primary ring-offset-2 ring-offset-muted',
           ]}
@@ -305,9 +305,14 @@
           />
         {/if}
         <Button
-          variant={shelfSelected ? 'default' : 'ghost'}
+          variant="ghost"
           size="sm"
-          class="h-auto w-5 px-0 py-2 text-xs text-muted-foreground"
+          class={[
+            'h-full w-full rounded-none border-s-4 px-0 py-3 text-xs',
+            shelfSelected
+              ? 'border-s-primary! bg-primary/20! text-foreground!'
+              : 'border-transparent!',
+          ]}
           title={ui.editing ? t('fleet-view.edit.shelfName') : undefined}
           onclick={() => {
             if (ui.editing) renaming = index;
@@ -317,7 +322,10 @@
                 : { unit: unit.id, shelf: index };
           }}
         >
-          <span class="rotate-180 truncate" style:writing-mode="vertical-rl">
+          <span
+            class="w-4 shrink-0 rotate-180 truncate leading-4"
+            style:writing-mode="vertical-rl"
+          >
             {sh.name}
           </span>
         </Button>
@@ -329,12 +337,25 @@
         >
           {#each cellsOf(sh, ui.device) as c (c.index)}
             <span
-              class="flex min-w-0 justify-center"
+              class="relative flex h-6 min-w-0 items-center justify-center"
               style:grid-column={c.wide ? 'span 2' : undefined}
             >
+              <!-- A ruler under the slot, its ticks on the slot's two edges. -->
+              <span
+                class="absolute inset-x-0 top-1/2 h-px bg-border"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="absolute start-0 top-1/2 h-2.5 w-px -translate-y-1/2 bg-muted-foreground/40"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="absolute end-0 top-1/2 h-2.5 w-px -translate-y-1/2 bg-muted-foreground/40"
+                aria-hidden="true"
+              ></span>
               {#if ui.editing}
                 <Input
-                  class="h-5 w-24 px-1 text-center text-xs"
+                  class="relative h-5 w-24 px-1 text-center text-xs"
                   aria-label={t('fleet-view.edit.slotName')}
                   value={c.slot.name}
                   oninput={(e: Event) => {
@@ -344,7 +365,9 @@
                   }}
                 />
               {:else}
-                <span class="truncate text-xs text-muted-foreground">
+                <span
+                  class="relative truncate rounded-sm border border-muted-foreground/40 bg-muted px-1.5 font-mono text-xs leading-4 text-muted-foreground"
+                >
                   {slotLabel(sh, c)}
                 </span>
               {/if}
