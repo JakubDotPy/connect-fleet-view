@@ -30,6 +30,18 @@ rack, one shelf or one printer and send them a command at once.
 - **YAML import and export.** Write the layout by hand, or keep it in version control.
 - **Rack card.** One rack's front view on a dashboard, with the same selection and commands.
 
+## Screenshots
+
+![The floor plan, every rack with a dot per slot in its printer's state colour](docs/screenshots/1-floor-plan.jpg)
+
+![One rack from the front, with a shelf selected](docs/screenshots/2-rack-shelf-selected.jpg)
+
+![The selection pill's commands for the selected printers](docs/screenshots/3-batch-commands.jpg)
+
+![Edit mode, with printers dragged onto slots](docs/screenshots/4-edit-mode.jpg)
+
+![A rack card on a dashboard](docs/screenshots/5-dashboard-rack-card.jpg)
+
 ## Requirements
 
 - Prusa Connect `0.1.0-beta.2` or newer.
@@ -44,7 +56,7 @@ its own and does no background work.
 From a release directory:
 
 ```bash
-prusa-connect module add github.com/jakubdotpy/connect-fleet-view@0.3.0 -from <release directory> -approve
+prusa-connect module add github.com/jakubdotpy/connect-fleet-view@0.3.1 -from <release directory> -approve
 ```
 
 Then open **Fleet View** in the sidebar. To put a rack on a dashboard, edit the dashboard, choose **Add a card**, pick

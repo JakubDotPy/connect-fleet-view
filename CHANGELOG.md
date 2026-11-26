@@ -7,6 +7,12 @@ Write the entry in the same change as the code. One bullet per behaviour a
 person outside this repository can observe: a route, a setting, a screen, a
 refusal. Name the route and the setting key, never a function or a file.
 
+## 0.3.1 - 2026-11-26
+
+### Changed
+
+- The extension's summary and the rack card's description say what Fleet View does for a print farm.
+
 ## 0.3.0 - 2026-11-25
 
 ### Changed
