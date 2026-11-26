@@ -15,9 +15,9 @@ title: Fleet View
 summary: >-
   Your print farm the way it stands in the room: racks on a floor plan, shelves in each rack, and every printer live
   in its slot with the print's picture, progress, time left and state. Printers that need you light up, so a run-out
-  spool or a heater fault is spotted from across the room. Select one printer, a shelf or a whole rack and pause,
+  spool is spotted from across the room. Select one printer, a shelf or a whole rack and pause,
   resume, stop, preheat, cool down, home or set them ready at once; lay out the farm by drag and drop, share one
-  layout with everyone, keep it in YAML, and pin any rack to a dashboard.
+  layout, keep it in YAML, and pin any rack to a dashboard.
 codeowner: jakubdotpy
 # The module wire major the process half speaks.
 contract_major: 1
